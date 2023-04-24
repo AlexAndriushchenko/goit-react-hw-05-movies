@@ -31,6 +31,12 @@ const Movies = () => {
     }
   }, [textSearchValue]);
 
+  useEffect(() => {
+    if (textSearchValue) {
+      setValue(textSearchValue);
+    }
+  }, [textSearchValue]);
+
   return (
     <FormContainer>
       <form onSubmit={onSubmitForm}>
